@@ -1,0 +1,21 @@
+
+.image-container {
+    position: relative;
+}
+
+.description {
+    margin-top: 20px;
+}
+.list-item {
+    cursor: pointer;
+    padding: 5px;
+    border-bottom: 1px solid #5D624C;
+}
+
+.list-item:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+

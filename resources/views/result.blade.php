@@ -7,13 +7,13 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>Hasil Kuis</title>
 </head>
-<body class="bg-neutral font-['Fira_Sans']">
-    <div class="container mx-auto p-6  w-2/4 h-screen bg-primary bg-opacity-55 flex flex-col items-center justify-center space-y-24">
+<body class="bg-neutral  ">
+    <div class="container mx-auto p-6  w-2/4 h-screen bg-primary bg-opacity-55 flex flex-col items-center justify-center ">
         <div class="text-center">
-            <h1 class="font-semibold text-5xl">Hasil Kuis</h1>
+            <h1 class="font-semibold text-5xl mb-24 text-white">Hasil Kuis</h1>
         </div>
         <div class="bg-secondary w-full mx-8 p-4 rounded-2xl space-y-2">
-            <h1 class="text-lg font-extralight text-white mt-4">Akurasi</h1>
+            <h1 class="text-lg font-semibold text-white mt-4">Akurasi</h1>
              <div class="bg-gray-200 rounded-full overflow-hidden relative">
                 <div id="progressBar" 
                     class="h-7 transition-all duration-100 ease-in-out"
@@ -24,7 +24,7 @@
         </div>
    
       
-        <div class=" grid grid-cols-3 w-full space-x-2">
+        <div class=" grid grid-cols-3 w-full space-x-2 mt-4 mb-20">
             <div class="relative flex items-center justify-center rounded-xl bg-secondary text-white hover:scale-105 transition duration-300 ease-in-out overflow-hidden p-4">
                 <!-- Ikon sebagai latar belakang -->
                 <i class="fa-solid fa-circle-check text-green-400 text-[8rem] absolute inset-0 opacity-30"></i>
@@ -73,7 +73,8 @@
             </div>
 
         </div>
-        <a href="{{ route('quiz', ['index' => 0]) }}" class="mt-6 inline-block bg-blue-500 text-white p-4 hover:bg-blue-600 w-full text-xl text-center font-semibold rounded-xl">Ulangi Kuis</a>
+        <a href="{{ route('quiz', ['index' => 0]) }}" class="w-full rounded-lg bg-blue-500 text-center py-4 text-xl font-semibold transition-all duration-300 ease-in-out text-white shadow-sm hover:bg-opacity-55"><i class="fa-solid fa-rotate-right text-2xl mr-2"></i>Ulangi Kuis</a>
+        <a href="/" class="w-full mt-2 rounded-lg bg-gray-500 text-center py-4 text-xl font-semibold transition-all duration-300 ease-in-out text-white shadow-sm hover:bg-opacity-55"><i class="fa-solid fa-arrow-right-from-bracket mr-2 text-2xl"></i>Kembali</a>
     </div>
 
     <script>

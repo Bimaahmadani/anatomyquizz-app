@@ -1,0 +1,27 @@
+#nav-link {
+    position: relative;
+    padding: 0.5em 0;
+    display: inline-block;
+    transition: color 0.5s;
+  }
+  
+  
+  #nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    border-radius: 4rem;
+    left: 0;
+    width: 100%;
+    height: 3px; /* Ketebalan underline */
+    background: #5D624C; /* Warna underline */
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s;
+  }
+  
+  #nav-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  

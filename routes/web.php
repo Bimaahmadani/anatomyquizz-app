@@ -2,12 +2,19 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use App\Http\Controllers\QuizController;
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('/pages/homepage/home');
 });
 
-use App\Http\Controllers\QuizController;
+Route::get('/anatomy', function () {
+    return view('/pages/anatomy/anatomy');
+});
 
 // Rute untuk menampilkan halaman kuis
 Route::get('/quiz/{index}', [QuizController::class, 'showQuiz'])->name('quiz');
