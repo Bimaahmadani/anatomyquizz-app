@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/5abb97ff2e.js" crossorigin="anonymous"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <title>Hasil Kuis Level {{ $level }}</title>
+    <title>Hasil Kuis Level {{ $level }} </title>
 </head>
 <body class="bg-neutral">
     <div class="container mx-auto p-6 w-2/4 h-screen bg-primary bg-opacity-55 flex flex-col items-center justify-center">
         <div class="text-center">
-            <h1 class="font-semibold text-5xl mb-24 text-white">Hasil Kuis Level {{ $level }}</h1>
+            <h1 class="font-semibold text-5xl mb-24 text-white">Hasil Kuis Quiz level {{ $level }}</h1>
         </div>
         <div class="bg-secondary w-full mx-8 p-4 rounded-2xl space-y-2">
             <h1 class="text-lg font-semibold text-white mt-4">Akurasi</h1>
@@ -65,10 +65,10 @@
         </div>
 
         <!-- Tombol Ulangi Level dan Lanjut ke Level Berikutnya -->
-        <a href="{{ route('quiz', ['level' => $level]) }}" class="w-full rounded-lg bg-blue-500 text-center py-4 text-xl font-semibold transition-all duration-300 ease-in-out text-white shadow-sm hover:bg-opacity-55">
+        <a href="{{ route('quiz', ['level' => $level, 'index' => 0]) }}" class="w-full rounded-lg bg-blue-500 text-center py-4 text-xl font-semibold transition-all duration-300 ease-in-out text-white shadow-sm hover:bg-opacity-55">
             <i class="fa-solid fa-rotate-right text-2xl mr-2"></i>Ulangi Level
         </a>
-        <a href="{{ route('quiz', ['level' => $level + 1]) }}" class="w-full mt-2 rounded-lg bg-gray-500 text-center py-4 text-xl font-semibold transition-all duration-300 ease-in-out text-white shadow-sm hover:bg-opacity-55">
+        <a href="{{ route('quiz', ['level' => $level + 1, 'index' => 0]) }}" class="w-full mt-2 rounded-lg bg-gray-500 text-center py-4 text-xl font-semibold transition-all duration-300 ease-in-out text-white shadow-sm hover:bg-opacity-55">
             <i class="fa-solid fa-arrow-right-from-bracket mr-2 text-2xl"></i>Lanjut ke Level {{ $level + 1 }}
         </a>
     </div>
