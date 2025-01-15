@@ -7,60 +7,89 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## About Tulangku.com
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Tulangku.com is a web-based application developed using Laravel, designed to help users learn about human skeletal anatomy through interactive quizzes and educational content. This application is hosted on GitHub at [anatomyquiz-app](https://github.com/Bimaahmadani/anatomyquizz-app).
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Quiz System**: Users can participate in quizzes to test their knowledge of human skeletal anatomy. After each level, detailed results are displayed, showing the number of correct, incorrect, and unanswered questions, along with the accuracy percentage.
+- **Dynamic Progress Bar**: Displays user accuracy with a progress bar that changes color based on performance.
+- **Interactive UI**: Smooth transitions and animations enhance the user experience.
+- **Navigation Options**: Users can retry the quiz or return to the main menu.
+- **Anatomy Learning Module**: Provides educational content about human skeletal anatomy, allowing users to learn and review before taking quizzes.
 
-## Learning Laravel
+## Technologies Used
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Laravel**: Backend framework for handling application logic and routing.
+- **Blade**: Templating engine for rendering dynamic views.
+- **Tailwind CSS**: For styling the application with responsive and modern UI elements.
+- **Font Awesome**: Provides icons for visual feedback and navigation.
+- **JavaScript**: Handles dynamic UI updates such as progress bar animations.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Installation
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/Bimaahmadani/anatomyquizz-app.git
+   cd anatomyquizz-app
+   ```
+2. **Install Dependencies**:
+   ```bash
+   composer install
+   npm install
+   ```
+3. **Set Up Environment**:
+   Copy the `.env.example` to `.env` and update the necessary configurations (e.g., database settings).
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
+4. **Run Migrations**:
+   Set up the database by running migrations.
+   ```bash
+   php artisan migrate
+   ```
+5. **Build Frontend Assets**:
+   Compile the frontend assets using Vite.
+   ```bash
+   npm run dev
+   ```
+6. **Run the Application**:
+   Start the local development server.
+   ```bash
+   php artisan serve
+   ```
 
-## Laravel Sponsors
+## Usage
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+1. **Access the Application**:
+   Open your browser and navigate to `http://localhost:8000`.
+2. **Start a Quiz**:
+   Select a quiz level and answer the questions.
+3. **View Results**:
+   After completing a level, view your results with detailed statistics and a progress bar.
+4. **Explore Learning Module**:
+   Access educational content on human skeletal anatomy to enhance your learning before taking quizzes.
+5. **Retry or Return**:
+   Use the provided buttons to retry the quiz or go back to the main menu.
 
-### Premium Partners
+## File Structure
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+- **app/Http/Controllers**: Contains the Quiz controller handling logic for displaying results.
+- **resources/views**: Blade templates for the quiz interface and result page.
+- **public/css**: Compiled CSS files from Tailwind.
+- **public/js**: Compiled JavaScript files.
 
-## Contributing
+## Contribution
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Feel free to fork this repository and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+---
+
+Enjoy learning and quizzing with Tulangku.com!
+
