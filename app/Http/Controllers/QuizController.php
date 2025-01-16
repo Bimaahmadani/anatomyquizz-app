@@ -6,78 +6,26 @@ use Illuminate\Http\Request;
 
 class QuizController extends Controller
 {
-    protected $quizQuestions = [
-        [
-            'level' => 1,
-            'question' => 'Apa ibu kota Indonesia?',
-            'options' => ['Jakarta', 'Surabaya', 'Bandung', 'Medan'],
-            'answer' => 'Jakarta',
-        ],
-        [
-            'level' => 1,
-            'question' => 'Siapa penemu bola lampu?',
-            'options' => ['Thomas Edison', 'Nikola Tesla', 'Alexander Graham Bell', 'Michael Faraday'],
-            'answer' => 'Thomas Edison',
-        ],
-        [
-            'level' => 1,
-            'question' => 'Apa planet terbesar di tata surya?',
-            'options' => ['Mars', 'Jupiter', 'Saturnus', 'Bumi'],
-            'answer' => 'Jupiter',
-        ],
-        [
-            'level' => 2,
-            'question' => 'Siapa presiden pertama Republik Indonesia?',
-            'options' => ['Sukarno', 'Suharto', 'BJ Habibie', 'Megawati Soekarnoputri'],
-            'answer' => 'Sukarno',
-        ],
-        [
-            'level' => 2,
-            'question' => 'Dalam ilmu anatomi, tulang apa yang melindungi otak manusia?',
-            'options' => ['Tulang tengkorak', 'Tulang rusuk', 'Tulang belakang', 'Tulang paha'],
-            'answer' => 'Tulang tengkorak',
-        ],
-        [
-            'level' => 2,
-            'question' => 'Siapa penulis novel Laskar Pelangi?',
-            'options' => ['Andrea Hirata', 'J.K. Rowling', 'Tere Liye', 'Dewi Lestari'],
-            'answer' => 'Andrea Hirata',
-        ],
-        [
-            'level' => 3,
-            'question' => 'Apa nama ilmiah dari air?',
-            'options' => ['H2O', 'O2', 'CO2', 'CH4'],
-            'answer' => 'H2O',
-        ],
-        [
-            'level' => 3,
-            'question' => 'Siapa penemu teori relativitas?',
-            'options' => ['Albert Einstein', 'Isaac Newton', 'Nikola Tesla', 'Galileo Galilei'],
-            'answer' => 'Albert Einstein',
-        ],
-        [
-            'level' => 3,
-            'question' => 'Apa hukum Newton yang pertama?',
-            'options' => ['Hukum Inersia', 'Hukum Aksi Reaksi', 'Hukum Gravitasi', 'Hukum Percepatan'],
-            'answer' => 'Hukum Inersia',
-        ],
-    ];
+    protected $quizQuestions;
 
-    // Metode untuk menampilkan halaman kuis
+    public function __construct()
+    {
+        // Load quiz questions from the config file
+        $this->quizQuestions = config('quiz_questions');
+    }
+
     public function showQuiz($level, $index)
     {
-        // Validate and process the quiz questions based on level and index
         $filteredQuestions = array_filter($this->quizQuestions, fn($quiz) => $quiz['level'] == $level);
         $questionsForLevel = array_values($filteredQuestions);
-    
+
         if ($index < 0 || $index >= count($questionsForLevel)) {
             return redirect()->route('quiz.submit', ['level' => $level, 'index' => 0]);
         }
-    
-        // Fetch the relevant quiz question based on level and index
+
         $quiz = $questionsForLevel[$index];
-    
-        return view("pages.quiz.quiz{$level}", [
+
+        return view("pages.quiz.quiz", [
             'quiz' => $quiz,
             'index' => $index,
             'totalQuestions' => count($questionsForLevel),
@@ -136,7 +84,7 @@ public function showResult($level)
     $percentage = ($correct / $totalQuestions) * 100;
 
     // Menentukan view yang sesuai berdasarkan level dan mengirimkan variabel level
-    return view("pages.result.result{$level}", [
+    return view("pages.result.result", [
         'correct' => $correct,
         'incorrect' => $incorrect,
         'unanswered' => $unanswered,

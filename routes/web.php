@@ -16,17 +16,14 @@ Route::get('/anatomy', function () {
     return view('\pages\anatomy\anatomy');
 });
 
-Route::get('/preview', function () {
-    return view('\pages\preview\preview1');
+Route::get('/about', function () {
+    return view('\pages\about\about');
 });
 
-Route::get('/preview2', function () {
-    return view('\pages\preview\preview2');
+Route::get('/pilih', function () {
+    return view('\pages\chooselevel\choose');
 });
 
-Route::get('/preview3', function () {
-    return view('\pages\preview\preview3');
-});
 
 // // Rute untuk menampilkan halaman kuis
 // Route::get('/quiz/{index}', [QuizController::class, 'showQuiz'])->name('quiz');

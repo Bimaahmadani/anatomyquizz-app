@@ -13,16 +13,19 @@
 </head>
 <body>
     <header class="absolute inset-x-0 top-0 z-50">
-        <nav class="flex items-center justify-center p-6 lg:px-8" aria-label="Global">
-
-          {{-- <div class="flex lg:flex-1">
-            <a href="#" class="-m-1.5 p-1.5">
-              <span class="sr-only">Your Company</span>
-              <img class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600" alt="">
+        <nav class="grid grid-cols-2 p-6 lg:grid-cols-3 lg:px-8" aria-label="Global">
+          <div class="flex flex-row justify-center item-center">
+            <a href="#" class="text-secondary font-serif text-3xl">
+              Tulangku.com
             </a>
-          </div> --}}
+          </div>
 
-          <div class="flex lg:hidden">
+          <div class="hidden lg:flex lg:justify-center lg:items-center lg:gap-x-12">
+           <a href="/" class="text-lg/6 font-semibold text-secondary hover:scale-105" id="nav-link"><i class="fa-solid fa-house mr-2"></i>Home</a>
+           <a href="/about" class="text-lg/6 font-semibold text-secondary hover:scale-105" id="nav-link"><i class="fa-solid fa-address-card mr-2"></i>About</a>
+          </div>
+
+          <div class="flex flex-row justify-end lg:hidden lg:justify-end">
             <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
               <span class="sr-only">Open main menu</span>
               <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
@@ -31,12 +34,7 @@
             </button>
           </div>
 
-          <div class="hidden lg:flex lg:justify-center lg:gap-x-12">
-            <a href="/" class="text-lg/6 font-semibold text-secondary hover:scale-105" id="nav-link"><i class="fa-solid fa-house mr-2"></i>Home</a>
-            <a href="#" class="text-lg/6 font-semibold text-secondary hover:scale-105" id="nav-link"><i class="fa-solid fa-address-card mr-2"></i>About</a>
-            <a href="#" class="text-lg/6 font-semibold text-secondary hover:scale-105" id="nav-link">Marketplace</a>
-            <a href="#" class="text-lg/6 font-semibold text-secondary hover:scale-105" id="nav-link">Company</a>
-          </div>
+          
 
           
         </nav>
@@ -46,10 +44,7 @@
           <div class="fixed inset-0 z-50"></div>
           <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div class="flex items-center justify-between">
-              <a href="#" class="-m-1.5 p-1.5">
-                <span class="sr-only">Your Company</span>
-                <img class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600" alt="">
-              </a>
+             
               <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
                 <span class="sr-only">Close menu</span>
                 <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
@@ -59,14 +54,9 @@
             </div>
             <div class="mt-6 flow-root">
               <div class="-my-6 divide-y divide-gray-500/10">
-                <div class="space-y-2 py-6">
-                  <a href="/" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-secondary hover:bg-gray-50" >Product</a>
-                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-secondary hover:bg-gray-50">Features</a>
-                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-secondary hover:bg-gray-50">Marketplace</a>
-                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-secondary hover:bg-gray-50">Company</a>
-                </div>
-                <div class="py-6">
-                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-secondary hover:bg-gray-50">Log in</a>
+                <div class="space-y-2 py-6 text-center">
+                  <a href="/" class="-mx-3 block rounded-lg px-3 py-2 text-lg/8 font-semibold text-secondary hover:bg-gray-50"><i class="fa-solid fa-house mr-2"></i>Home</a>
+                  <a href="/about" class="-mx-3 block rounded-lg px-3 py-2 text-lg/8 font-semibold text-secondary hover:bg-gray-50 "><i class="fa-solid fa-address-card mr-2"></i>About</a>
                 </div>
               </div>
             </div>
