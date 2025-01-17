@@ -5,13 +5,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const highlightArea = document.getElementById('highlight-area');
     const description = document.getElementById('description');
 
-    const explanations = {
-        "Skull": "Skull adalah struktur tulang yang membentuk kepala dan melindungi otak.",
-        "Maxilla": "Maxilla adalah tulang wajah bagian atas yang membentuk rahang atas dan memegang gigi atas.",
-        "Mandible": "Mandible adalah tulang rahang bawah yang merupakan satu-satunya tulang wajah yang dapat bergerak.",
-        "Tulang Rusuk": "Tulang rusuk melindungi organ vital seperti jantung dan paru-paru di dalam rongga dada.",
-        "Tulang Paha": "Tulang paha adalah tulang panjang di paha yang menyokong berat badan tubuh saat berdiri dan berjalan."
-    };
+    // Muat explanations dari file JSON
+    let explanations = {};
+    fetch('/data/explanations.json')
+        .then(response => response.json())
+        .then(data => {
+            explanations = data;
+        })
+        .catch(error => console.error('Gagal memuat explanations:', error));
 
     listItems.forEach(item => {
         item.addEventListener('click', () => {
@@ -43,23 +44,23 @@ document.addEventListener('DOMContentLoaded', function () {
                         highlightArea.style.height = heightPx;
                         highlightArea.style.display = 'block';
                     }
-                }else {
-                    // Logika untuk menampilkan panah horizontal
-                if (leftPx > 83) {
-                    arrowLeft.style.top = topPx;
-                    arrowLeft.style.left = leftValue.split(':')[1].trim();
-                    arrowLeft.style.display = 'block';
                 } else {
-                    arrowRight.style.top = topPx;
-                    arrowRight.style.left = leftValue.split(':')[1].trim();
-                    arrowRight.style.display = 'block';
-                }
+                    // Logika untuk menampilkan panah horizontal
+                    if (leftPx > 83) {
+                        arrowLeft.style.top = topPx;
+                        arrowLeft.style.left = leftValue.split(':')[1].trim();
+                        arrowLeft.style.display = 'block';
+                    } else {
+                        arrowRight.style.top = topPx;
+                        arrowRight.style.left = leftValue.split(':')[1].trim();
+                        arrowRight.style.display = 'block';
+                    }
                 }
 
-                // Tampilkan penjelasan dari objek explanations
+                // Tampilkan penjelasan dari explanations
                 const partName = item.textContent.trim();
                 description.querySelector('p').textContent = explanations[partName] || "Penjelasan tidak tersedia.";
-            } 
+            }
         });
     });
 });

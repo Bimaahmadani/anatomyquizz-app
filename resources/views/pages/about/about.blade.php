@@ -17,7 +17,7 @@
             </div>
         </div>
 
-        <div class="image-container hidden sm:flex justify-end items-center col-span-2">
+        <div class="image-container hidden sm:flex justify-center items-center col-span-2">
             <img src="{{ asset('img/anatomy-vintage (1).jpg') }}" alt="Skeletal Manusia" class="w-[400px] rounded-xl">
         </div>
         <img src="{{ asset('img/anatomy-vintage (1).jpg') }}" alt="Skeletal Manusia" class="absolute w-[400px] opacity-30 -z-10 top-24 left-52 rounded-xl sm:hidden ">
@@ -42,7 +42,7 @@
               Pembelajaran Interaktif
             </dt>
             <dd class="mt-2 text-base/7 text-gray-600">Jelajahi bagian-bagian tubuh dengan visual yang menarik dan informatif.</dd>
-            <a href="/anatomy" class="text-sm/6 font-semibold text-gray-900 hover:text-primary">Mulai  <span aria-hidden="true">→</span></a>
+            <a href="/anatomy" class="text-sm/6 font-semibold text-blue-500 hover:text-primary underline">Mulai  <span aria-hidden="true">→</span></a>
           </div>
           <div class="relative pl-16">
             <dt class="text-base/7 font-semibold text-gray-900">
@@ -52,7 +52,7 @@
                 Kuis Menantang
             </dt>
             <dd class="mt-2 text-base/7 text-gray-600">Uji pengetahuan Anda dengan berbagai tingkat kesulitan dan raih pencapaian terbaik.</dd>
-            <a href="/pilih" class="text-sm/6 font-semibold text-gray-900 hover:text-primary">Mulai  <span aria-hidden="true">→</span></a>
+            <a href="/pilih" class="text-sm/6 font-semibold text-blue-500 hover:text-primary underline">Mulai  <span aria-hidden="true">→</span></a>
           </div>
          
         </dl>
