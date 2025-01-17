@@ -13,7 +13,7 @@
   "env": {
     "APP_ENV": "production",
     "APP_DEBUG": "true",
-    "APP_URL": "https://tulangku-kwee5zivg-bima-ahmadani-diyaul-haqs-projects.vercel.app",
+    "APP_URL": "https://anatomyquizz-app-e7yy-o32m2zbdm.vercel.app",
     "APP_KEY": "base64:MxmhOOD5AKriAdGSmKevB3ek2yumAlKdsxPDfit2gmk=",
 
     "APP_CONFIG_CACHE": "/tmp/config.php",
