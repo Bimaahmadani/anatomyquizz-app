@@ -18,9 +18,9 @@
         </div>
 
         <div class="image-container hidden sm:flex justify-center items-center col-span-2">
-            <img src="{{ asset('img/anatomy-vintage (1).jpg') }}" alt="Skeletal Manusia" class="w-[400px] rounded-xl">
+            <img src="{{ asset('img/anatomy-vintage.jpg') }}" alt="Skeletal Manusia" class="w-[400px] rounded-xl">
         </div>
-        <img src="{{ asset('img/anatomy-vintage (1).jpg') }}" alt="Skeletal Manusia" class="absolute w-[400px] opacity-30 -z-10 top-24 left-52 rounded-xl sm:hidden ">
+        <img src="{{ asset('img/anatomy-vintage.jpg') }}" alt="Skeletal Manusia" class="absolute w-[400px] opacity-30 -z-10 top-24 left-52 rounded-xl sm:hidden ">
     </div>
 
 </div>
