@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "framework": null,
   "builds": [
     { "src": "public/**/*", "use": "@vercel/static" }
   ],
@@ -11,8 +12,8 @@
   ],
   "env": {
     "APP_ENV": "production",
-    "APP_DEBUG": "false",
-    "APP_URL": "https://your.url.from.vercel.app",
+    "APP_DEBUG": "true",
+    "APP_URL": "https://tulangku-i0pe3o3ev-bima-ahmadani-diyaul-haqs-projects.vercel.app",
     "APP_KEY": "your-app-key",
 
     "APP_CONFIG_CACHE": "/tmp/config.php",
