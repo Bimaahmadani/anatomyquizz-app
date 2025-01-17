@@ -9,19 +9,19 @@ use App\Http\Controllers\QuizController;
 // });
 
 Route::get('/', function () {
-    return view('\pages\homepage\home');
+    return view('/pages/homepage/home');
 });
 
 Route::get('/anatomy', function () {
-    return view('\pages\anatomy\anatomy');
+    return view('/pages/anatomy/anatomy');
 });
 
 Route::get('/about', function () {
-    return view('\pages\about\about');
+    return view('/pages/about/about');
 });
 
 Route::get('/pilih', function () {
-    return view('\pages\chooselevel\choose');
+    return view('/pages/chooselevel/choose');
 });
 
 
