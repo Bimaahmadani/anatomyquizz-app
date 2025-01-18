@@ -33,7 +33,9 @@
                       <!-- Accordion Bagian Kepala -->
                       <div class="w-full h-full p-2">
                           <div class="border-2 border-primary rounded-md bg-white ">
-                            <button class=" w-full rounded-t-sm bg-primary px-3.5 py-2.5 text-md transition-all duration-300 ease-in-out font-semibold text-white shadow-sm hover:bg-opacity-55 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" 
+                            <button class=" w-full rounded-t-sm bg-primary px-3.5 py-2.5 text-md transition-all duration-300 ease-in-out font-semibold 
+                            text-white shadow-sm hover:bg-opacity-55 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 
+                            focus-visible:outline-primary" 
                             type="button" aria-expanded="false" aria-controls="head-section">
                               Bagian Kepala
                             </button>
@@ -51,7 +53,9 @@
                       <!-- Accordion Bagian Bahu dan Dada -->
                       <div class="w-full h-full p-2">
                       <div class="border-2 border-primary rounded-md bg-white ">
-                        <button class="w-full rounded-t-sm bg-primary px-3.5 py-2.5 text-md transition-all duration-300 ease-in-out font-semibold text-white shadow-sm hover:bg-opacity-55 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" 
+                        <button class="w-full rounded-t-sm bg-primary px-3.5 py-2.5 text-md transition-all 
+                        duration-300 ease-in-out font-semibold text-white shadow-sm hover:bg-opacity-55 focus-visible:outline 
+                        focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" 
                         type="button" aria-expanded="false" aria-controls="shoulder-chest-section">
                           Bagian Bahu dan Dada
                         </button>
